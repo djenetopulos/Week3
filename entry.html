@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>High Score</title>
+</head>
+<body>
+    <nav>
+            <a href="/">home</a>
+            <a href="entry.html">Add Entry</a>
+            <a href="scores.html">View Scores</a>
+    </nav>
+    <form action="/SubmitHighScore" method = "POST">
+        <label for="Name">Name:</label><br>
+        <input type="text" name="username" id="playerName"><br>
+        <label for="Score">Score:</label><br>
+        <input type="text" name="score" id="playerScore"><br>
+        <button type="submit">Become Legend</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>High Score</title>
+</head>
+<body>
+        <nav>
+                <a href="/">home</a>
+                <a href="entry.html">Add Entry</a>
+                <a href="scores.html">View Scores</a>
+        </nav>
+</body>
+<script>
+        fetch('/scores').then(function(outer){
+            outer.json().then(function(scores){
+            console.log(scores);
+            for(let score of scores){
+                console.log(score);
+                let scoreElement = document.createElement('p');
+                scoreElement.innerText = (score.Name + " -- " + score.Score);
+                
+                document.body.appendChild(scoreElement);
+            }
+        })
+        });
+</script>
+</html>
